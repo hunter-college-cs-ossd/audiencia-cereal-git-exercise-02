@@ -38,15 +38,14 @@ using namespace std;
 typedef ostream& (*output_function) (const ostream & out);
 
 
-ostream& LiudmilaZyrianova239_oddity(ostream & out){
+ostream& LiudmilaZyrianova239_oddity(ostream & out)
+{
     out << "If 7-11 is open 24 hours a day, 365 days a year, why are there locks on the doors?\n";
     return out;
 }
 
-
 int main(int argc, char* argv[] )
 {
-
     LiudmilaZyrianova239_oddity(cout);
 
     return 0;
