@@ -1,12 +1,14 @@
 /******************************************************************************
   Title          : main.cpp
   Author         : audiencia-cereal
-  Created on     : October  7, 2018
+  Created on     : October 7, 2018
   Description    : Displays random peculiar facts
   Purpose        : To exercise collaborative source code development
   Usage          : nuttyfact
   Build with     : g++ -Wall -g -o oddities  main.cpp
-  Modifications  : Added LiudmilaZyrianova239_oddity to main file
+  Modifications  : Added LiudmilaZyrianova239_oddity to main file 
+                   Added Jimmyzs_oddity to main.cpp
+                   Added yizongk_oddity to main.cpp
   Notes:
   The number N below is the number of people on each team.
   This program prints N peculiar facts, called "oddities" here.
@@ -37,12 +39,6 @@ using namespace std;
 // The syntax of the output function that must be used to print an oddity.
 typedef ostream& (*output_function) (ostream & out);
 
-/******************************************************************************
-        
-                        All Function Definitions
-
-******************************************************************************/
-
 ostream& audiencia_cereal_oddity(ostream & out)
 {
     out << "This is a collection of strange but true facts.\n";
@@ -60,8 +56,19 @@ ostream& LiudmilaZyrianova239_oddity(ostream & out)
     out << "If 7-11 is open 24 hours a day, 365 days a year, why are there locks on the doors?\n";
     return out;
 }
+ostream& Jimmyzs_oddity(ostream & out)
+{
+    out<<"Why do you need a driver's license to buy liquor when you can't drink and drive?\n";
+    return out;
+}
 
+/******************************************************************************
+        
+                        All Function Definitions
 
+******************************************************************************/
+
+//main function
 int main(int argc, char* argv[] )
 {
     //Create an object of type output_function
@@ -77,6 +84,9 @@ int main(int argc, char* argv[] )
     output_function yizongk = &yizongk_oddity;
     yizongk(cout);
 
+    // Calls to output functions
+    output_function Jimmyzs = &Jimmyzs_oddity;
+    Jimmyzs(cout);
 
     return 0;
 }
