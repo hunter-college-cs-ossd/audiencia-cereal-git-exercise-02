@@ -9,6 +9,7 @@
   Modifications  : Added LiudmilaZyrianova239_oddity to main file 
                    Added Jimmyzs_oddity to main.cpp
                    Added yizongk_oddity to main.cpp
+                   Added DanieSegarra36_oddity to main.cpp
   Notes:
   The number N below is the number of people on each team.
   This program prints N peculiar facts, called "oddities" here.
@@ -62,6 +63,11 @@ ostream& Jimmyzs_oddity(ostream & out)
     return out;
 }
 
+ostream& DanieSegarra36_oddity(ostream & out){
+    out << "Have you ever imagined a world with no hypothetical situations?\n";
+    return out;
+}
+
 /******************************************************************************
         
                         All Function Definitions
@@ -87,6 +93,12 @@ int main(int argc, char* argv[] )
     // Calls to output functions
     output_function Jimmyzs = &Jimmyzs_oddity;
     Jimmyzs(cout);
+
+    // 1. Assign function pointer the address of Daniel's function
+    // 2. Call function
+    // 3. Profit
+    output_function DanieSegarra36 = &DanieSegarra36_oddity;
+    DanieSegarra36(cout); 
 
     return 0;
 }
