@@ -37,16 +37,30 @@ using namespace std;
 // The syntax of the output function that must be used to print an oddity.
 typedef ostream& (*output_function) (ostream & out);
 
+/******************************************************************************
+        
+                        All Function Definitions
+
+******************************************************************************/
+
 ostream& audiencia_cereal_oddity(ostream & out)
 {
     out << "This is a collection of strange but true facts.\n";
     return out;
 }
+
+ostream& yizongk_oddity(ostream& out) 
+{
+    out << "Do you need a silencer if you are going to shoot a mime?\n";
+    return out;
+}
+
 ostream& LiudmilaZyrianova239_oddity(ostream & out)
 {
     out << "If 7-11 is open 24 hours a day, 365 days a year, why are there locks on the doors?\n";
     return out;
 }
+
 
 int main(int argc, char* argv[] )
 {
@@ -58,6 +72,11 @@ int main(int argc, char* argv[] )
     //Call function by LiudmilaZyrianova239
     output_function LiudmilaZyrianova239 = &LiudmilaZyrianova239_oddity;
     LiudmilaZyrianova239(cout);
+
+    //Call function by yizongk
+    output_function yizongk = &yizongk_oddity;
+    yizongk(cout);
+
 
     return 0;
 }
