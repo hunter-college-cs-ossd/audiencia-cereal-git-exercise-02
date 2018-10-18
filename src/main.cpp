@@ -63,7 +63,8 @@ ostream& Jimmyzs_oddity(ostream & out)
     return out;
 }
 
-ostream& DanieSegarra36_oddity(ostream & out){
+ostream& DanieSegarra36_oddity(ostream & out)
+{
     out << "Have you ever imagined a world with no hypothetical situations?\n";
     return out;
 }
@@ -90,13 +91,11 @@ int main(int argc, char* argv[] )
     output_function yizongk = &yizongk_oddity;
     yizongk(cout);
 
-    // Calls to output functions
+    // Calls function by Jimmyzs
     output_function Jimmyzs = &Jimmyzs_oddity;
     Jimmyzs(cout);
 
-    // 1. Assign function pointer the address of Daniel's function
-    // 2. Call function
-    // 3. Profit
+    //Call function by DanieSegarra36
     output_function DanieSegarra36 = &DanieSegarra36_oddity;
     DanieSegarra36(cout); 
 
